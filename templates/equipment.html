@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <ul>
+            <li><h4><a href="/">Home</a></h4></li>
+            <li><h4><a href="/recipes">View Recipes</a></h4></li>
+            <li><h4><a href="/ingredients">View Ingredients</a></h4></li>
+            <li><h4><a href="/new-recipe">Add a Recipe</a></h4></li>
+        </ul>
+        <table border = 1>
+            <thead>
+                <td>Recipe</td>
+                <td>Equipment</td>
+                <!--<td>Steps</td>-->
+            </thead>
+
+            {% for row in rows %}
+            <tr>
+                <td>{{row["rname"]}}</td>
+                <td>{{row["equipment"]}}</td>
+                <!--<td>{{row["steps"]}}</td>-->
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
